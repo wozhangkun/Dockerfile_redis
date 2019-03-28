@@ -7,8 +7,8 @@ echo 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' >> /etc/rc.local
 echo 'vm.overcommit_memory = 1' >> /etc/sysctl.conf echo 'net.core.somaxconn= 511' >> /etc/sysctl.conf
 sysctp -p
 
-#############run：
-docker run -tid --name redis --restart=unless-stopped -p 6377:6379 -v /data/redis:/data --sysctl net.core.somaxconn=511 wozhangkun/redis:4.0.14
+#############run：                                  
+docker run -tid --name redis --restart=unless-stopped -p 6377:6379 -v /data/redis:/data --sysctl net.core.somaxconn=511 wozhangkun/redis:4.0.14                                      
 #############add passwd run：
 docker run -tid --name redis --restart=unless-stopped -p 6377:6379 -v /data/redis:/data --sysctl net.core.somaxconn=511 wozhangkun/redis:4.0.14 redis-server /etc/redis/redis.conf --requirepass 111111
 
