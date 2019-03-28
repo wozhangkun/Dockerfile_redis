@@ -9,8 +9,8 @@ FROM centos
 
 #down redis
 # Stable version:    
-ENV REDIS_DOWNLOAD_URL http://download.redis.io/redis-stable.tar.gz 
-#ENV REDIS_DOWNLOAD_URL http://download.redis.io/releases/redis-4.0.14.tar.gz
+#ENV REDIS_DOWNLOAD_URL http://download.redis.io/redis-stable.tar.gz 
+ENV REDIS_DOWNLOAD_URL http://download.redis.io/releases/redis-4.0.14.tar.gz
 
 # Install Redis.
 RUN \
